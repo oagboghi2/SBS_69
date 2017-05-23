@@ -16,7 +16,7 @@
 
 #### Stories
 - [x ] Books have a title, author, and genre
-- [ ] Users can add books into the bookstore system via an admin page (_create_)
+- [x ] Users can add books into the bookstore system via an admin page (_create_)
 - [ ] Users can see a list of books on the home page (_read_)
 - [ ] Users can edit a book's title, author, or genre (_update_)
 - [ ] Users can delete a book from the bookstore (_delete_)
@@ -28,8 +28,8 @@
 
 #### HTTP Verbs
 Appropriate HTTP verbs are used for CRUD actions (for reference, follow the guidelines explained in [this article](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#restful))
-- [ ] `GET` requests are only used for _read_ actions
-- [ ] `POST` requests are only used for _create_ actions
+- [x ] `GET` requests are only used for _read_ actions
+- [x ] `POST` requests are only used for _create_ actions
 - [ ] `PUT` or `PATCH` requests are only used for _update_ actions
 - [ ] `DELETE` requests are only used for _delete_ actions
 

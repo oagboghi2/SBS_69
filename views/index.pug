@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1 BookStore
+  p
+  .col2
+        form(action='/api/books/title' method = 'get')
+          | title:
+          br
+          input(type='text', name='title', value='')
+          br
+          input(name='search', type='submit', value='Submit')
+        form(action='/api/books/author' method = 'get')
+          | author
+          br
+          input(type='text', name='author', value='')
+          br
+          input(name='search', type='submit', value='Submit')
+        form(action='/api/books/genre' method = 'get')
+          | genre
+          br
+          input(type='text', name='genre', value='')
+          br
+          input(name='search', type='submit', value='Submit')
+        form(action='/api/books/publisher' method = 'get')
+          | publisher
+          br
+          input(type='text', name='publisher', value='')
+          br
+          input(name='search', type='submit', value='Submit')
+  .col3
+    each item in data
+      p= item.id
+      img(src='item.img', alt='book image', height='242', width='242')
+      p= item.title
+      p= item.author
+      p= item.genre
+      p= item.publisher

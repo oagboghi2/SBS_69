@@ -15,16 +15,16 @@
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
 #### Stories
-- [ ] Books have a title, author, and genre
+- [x ] Books have a title, author, and genre
 - [ ] Users can add books into the bookstore system via an admin page (_create_)
 - [ ] Users can see a list of books on the home page (_read_)
 - [ ] Users can edit a book's title, author, or genre (_update_)
 - [ ] Users can delete a book from the bookstore (_delete_)
-- [ ] Users can search for books by title OR by author OR by genre (_read_)
+- [ x] Users can search for books by title OR by author OR by genre (_read_)
 - [ ] Users can view book details on a book detail page (_read_)
 - [ ] Lists of books are always paginated in groups of 10
 - [ ] Book detail view is linked to from the listing and search pages
-- [ ] Search results are presented in a new page
+- [x ] Search results are presented in a new page
 
 #### HTTP Verbs
 Appropriate HTTP verbs are used for CRUD actions (for reference, follow the guidelines explained in [this article](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#restful))

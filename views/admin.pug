@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1 BookStore
+  p
+  .col2
+        form(action=`/api/books/admin/`, method = 'post')
+          | Title:
+          br
+          input(type='text', name='title', value='')
+          br
+          //input(name='search', type='submit', value='Submit')
+          | Author
+          br
+          input(type='text', name='author', value='')
+          br
+          //input(name='search', type='submit', value='Submit')
+          | Genre
+          br
+          input(type='text', name='genre', value='')
+          br
+          //input(name='search', type='submit', value='Submit')
+          | Publisher
+          br
+          input(type='text', name='publisher', value='')
+          br
+          input(name='search', type='submit', value='Submit')
+          //.col3
+          br
+  button.btn
+    a(href='http://localhost:3000/api/books/admin/delete')
+      | DELETE
+      br

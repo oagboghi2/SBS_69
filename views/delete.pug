@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 BookStore
+  p
+  .col2
+        form(action=`/api/books/admin/delete/:id`, method = 'post')
+          | DELETE:
+          br
+          input(type='integer', name='delete', value='')
+          br
+          input(name='search', type='submit', value='Submit')

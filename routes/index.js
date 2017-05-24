@@ -17,7 +17,8 @@ router.get('/', function(req, res, next) {
 });
 
 //router.get('/api/music', db.getAllMusic);
-router.get('/api/books', function( req, res ){
+router.get('/api/books', function( req, res, next ){
+  var booksId = req.params.id;
   db.any('SELECT * FROM books')
   .then(function (data){
     res.render('../views/index.pug', {data: data})
@@ -77,6 +78,58 @@ router.get('/api/books/genre', function( req, res, next){
       return next(err);
     })
   })
+
+router.get('/api/books/admin', function( req, res ){
+  res.render('admin')
+});
+
+router.post('/api/books/admin/', function( req, res){
+   var { id, title, author, genre, img, publisher } = req.body; //use req.body for POST routes
+   console.log(req.body.id);
+  db.one('INSERT INTO books( title, author, genre, img, publisher ) VALUES($1, $2, $3, $4, $5) RETURNING id', [title, author, genre, img, publisher])
+  //res.render('../views/admin.pug', {data: data})
+  .then( function() { res.status(201).json({
+        status: 'success',
+        message: 'Inserted book'
+      })
+    })
+  .catch( function( error ) {
+    res.send( error )
+  })
+})
+
+router.put('/api/books/admin/update/:id', function( req, res ){  //console.log(req.query.title);
+   var { id, title, author, genre, img, publisher } = req.body; //use req.body for POST routes
+   console.log(req.body.id);
+  db.one('UPDATE books SET publisher = Random House WHERE id = $1', [ID])
+  res.render('../views/admin.pug', {data: data})
+  .then( function() { res.status(201).json({
+        status: 'success',
+        message: 'Inserted book'
+      })
+    })
+  .catch( function( error ) {
+    res.send( error )
+  })
+})
+
+router.get('/api/books/admin/delete', function( req, res ){
+  res.render('delete')
+});
+
+router.delete('/api/books/admin/delete/:id', function( req, res ){
+   var { id, title, author, genre, img, publisher } = req.body; //use req.body for POST routes
+   console.log(req.body.id);
+  return db.any('DELETE books WHERE id = $1', [id])
+  .then( function() { res.status(201).json({
+        status: 'success',
+        message: 'Deleted book'
+      })
+    })
+  .catch( function( error ) {
+    res.send( error )
+  })
+})
 
 
 module.exports = router;

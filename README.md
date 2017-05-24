@@ -1,5 +1,17 @@
 # SBS_69
 
+installation
+
+npm install
+
+how to run ?
+
+run this from a terminal
+
+    nodemon app.js
+    
+open http://localhost:3000/
+
 ## Specifications
 
 #### General

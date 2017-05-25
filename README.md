@@ -29,11 +29,11 @@ open http://localhost:3000/
 #### Stories
 - [x ] Books have a title, author, and genre
 - [x ] Users can add books into the bookstore system via an admin page (_create_)
-- [ ] Users can see a list of books on the home page (_read_)
+- [x ] Users can see a list of books on the home page (_read_)
 - [ ] Users can edit a book's title, author, or genre (_update_)
-- [ ] Users can delete a book from the bookstore (_delete_)
-- [ x] Users can search for books by title OR by author OR by genre (_read_)
-- [ ] Users can view book details on a book detail page (_read_)
+- [x ] Users can delete a book from the bookstore (_delete_)
+- [x ] Users can search for books by title OR by author OR by genre (_read_)
+- [x ] Users can view book details on a book detail page (_read_)
 - [ ] Lists of books are always paginated in groups of 10
 - [ ] Book detail view is linked to from the listing and search pages
 - [x ] Search results are presented in a new page

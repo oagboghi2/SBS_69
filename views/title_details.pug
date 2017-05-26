@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  a(href='http://localhost:3000/')
+      h1  BookStore
+
+  .col3
+    each item in data
+      //p= item.id
+      p= item.title
+      p= item.author
+      p= item.genre
+      p= item.publisher
+      img(src='item.img', alt='book image', height='242', width='242')
+      p= item.background
+
+
+    .col4
+      each item in data
+        form(action='/api/books/title/details/' + item.id method = 'post')
+          br
+          input(type='hidden', name='delete', value='item.id')  
+          br
+          input(type='submit' name='_method' value='DELETE')
+            
+      .col4
+        each item in data
+          button.btn
+            a(href=`http://localhost:3000/api/books/title/details/update/${item.id}`)
+              | UPDATE
+              br
+            
+            

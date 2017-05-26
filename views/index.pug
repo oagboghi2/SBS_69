@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  h1 BookStore
+  a(href='http://localhost:3000/')
+      h1  BookStore
   p
   .col2
         form(action='/api/books/title' method = 'get')
@@ -28,11 +29,14 @@ block content
           input(type='text', name='publisher', value='')
           br
           input(name='search', type='submit', value='Submit')
+          br
   .col3
     each item in data
-      p= item.id
+      //p= item.id
       img(src='item.img', alt='book image', height='242', width='242')
-      p= item.title
+      a(href='http://localhost:3000/api/books/title/details/' + item.title )
+        p= item.title
       p= item.author
       p= item.genre
       p= item.publisher
+      p= item.background

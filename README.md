@@ -35,7 +35,7 @@ open http://localhost:3000/
 - [x ] Users can delete a book from the bookstore (_delete_)
 - [x ] Users can search for books by title OR by author OR by genre (_read_)
 - [x ] Users can view book details on a book detail page (_read_)
-- [ ] Lists of books are always paginated in groups of 10
+- [x] Lists of books are always paginated in groups of 10
 - [x ] Book detail view is linked to from the listing and search pages
 - [x ] Search results are presented in a new page
 

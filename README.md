@@ -23,7 +23,7 @@ open http://localhost:3000/
 - [x ] All pull requests are approved by at least one other member of the team using GitHub's [pull request review feature](https://help.github.com/articles/about-pull-request-reviews/) (so that your teammate's approval is of the PR is documented)
 - [x ] Variables, functions, files, etc. have appropriate and meaningful names.
 - [x ] Functions are small and serve a single purpose
-- [ ] Code uses a linter and there are no linting errors.
+- [x ] Code uses a linter and there are no linting errors.
 - [ ] Code is well tested and all tests are passing.
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
